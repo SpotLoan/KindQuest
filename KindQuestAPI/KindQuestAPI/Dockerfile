@@ -7,7 +7,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["KindQuestAPI/KindQuestAPI.csproj", "KindQuestAPI/"]
+COPY ["KindQuestAPI/KindQuestAPI.csproj", "KindQuestAPI/KindQuestAPI"]
 RUN dotnet restore "KindQuestAPI/KindQuestAPI.csproj"
 COPY . .
 WORKDIR "/src/KindQuestAPI"
