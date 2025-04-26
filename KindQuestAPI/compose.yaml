@@ -1,0 +1,6 @@
+﻿services:
+  kindquestapi:
+    image: kindquestapi
+    build:
+      context: .
+      dockerfile: KindQuestAPI/Dockerfile

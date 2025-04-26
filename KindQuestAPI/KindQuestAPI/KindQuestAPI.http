@@ -1,0 +1,6 @@
+@KindQuestAPI_HostAddress = http://localhost:5015
+
+GET {{KindQuestAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
