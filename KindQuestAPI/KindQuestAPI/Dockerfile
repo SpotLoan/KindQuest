@@ -17,7 +17,7 @@ RUN dotnet restore "KindQuestAPI.csproj"
 COPY [".", "."]
 
 # Build the project (already in the correct WORKDIR: /src)
-RUN dotnet build "KindQuestAPI.csproj" -c $BUILD_CONFIGURATION -o /app/build --no-restore
+RUN dotnet build "KindQuestAPI.csproj" -c $BUILD_CONFIGURATION --no-restore
 
 # Stage 2: Publish
 FROM build AS publish
