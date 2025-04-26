@@ -12,7 +12,7 @@ WORKDIR /src
 
 # Copy only the project file first to leverage Docker layer caching
 # Uses the correct nested path from your repository
-COPY ["KindQuest/KindQuestAPI/KindQuestAPI.csproj", "KindQuestAPI/KindQuestAPI/"]
+COPY ["KindQuest/KindQuestAPI/KindQuestAPI/KindQuestAPI.csproj", "KindQuestAPI/KindQuestAPI/"]
 
 # Set the working directory to where the .csproj was copied
 WORKDIR "/src/KindQuestAPI/KindQuestAPI"
