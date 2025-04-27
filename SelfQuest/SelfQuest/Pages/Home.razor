@@ -2,6 +2,118 @@
 
 <PageTitle>Home</PageTitle>
 
-<h1>Hello, world!</h1>
+<div>
+    <!-- Top Dropdown for Home Page -->
+    <div class="w-full flex items-center justify-between px-2 py-2 bg-[var(--color-white)] border-b border-[var(--color-gray-700)]" style="font-family: var(--font-sans);">
+        <!-- Dropdown trigger -->
+        <div class="dropdown">
+            <label tabindex="0" class="btn btn-ghost btn-circle p-0 min-h-0 h-8 w-8">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-[var(--color-black)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </label>
+            <ul
+                tabindex="0"
+                class="dropdown-content fixed top-0 left-0 right-0 w-full max-w-none z-50 p-4 shadow bg-[var(--color-white)] rounded-b-2xl border-b border-[var(--color-gray-700)] space-y-3"
+                style="font-family: var(--font-sans);"
+            >
+                <!-- Header -->
+                <li>
+                    <div class="font-bold text-lg text-[var(--color-black)] mb-2">
+                        4 Remaining Quests...
+                    </div>
+                </li>
+                <!-- Quest 1 -->
+                <li>
+                    <div class="flex items-center justify-between gap-2 p-3 rounded-xl bg-[var(--color-gray-700)]/5 hover:bg-[var(--color-gray-700)]/10 transition">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl">🐯</span>
+                            <div>
+                                <div class="font-medium text-[var(--color-black)]">Walk for 30 min.</div>
+                                <div class="text-xs text-[var(--color-blue-500)] font-semibold">35 EXP</div>
+                            </div>
+                        </div>
+                        <button
+                            class="btn btn-xs bg-[var(--color-blue-500)] text-[var(--color-white)] rounded-full px-4 hover:bg-[var(--color-blue-500)]/80 transition"
+                        >
+                            Start
+                        </button>
+                    </div>
+                </li>
+                <!-- Quest 2 -->
+                <li>
+                    <div class="flex items-center justify-between gap-2 p-3 rounded-xl bg-[var(--color-gray-700)]/5 hover:bg-[var(--color-gray-700)]/10 transition">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl">🐟</span>
+                            <div>
+                                <div class="font-medium text-[var(--color-black)]">Work out for 30 min.</div>
+                                <div class="text-xs text-[var(--color-blue-500)] font-semibold">50 EXP</div>
+                            </div>
+                        </div>
+                        <button
+                            class="btn btn-xs bg-[var(--color-blue-500)] text-[var(--color-white)] rounded-full px-4 hover:bg-[var(--color-blue-500)]/80 transition"
+                        >
+                            Start
+                        </button>
+                    </div>
+                </li>
+                <!-- Quest 3 -->
+                <li>
+                    <div class="flex items-center justify-between gap-2 p-3 rounded-xl bg-[var(--color-gray-700)]/5 hover:bg-[var(--color-gray-700)]/10 transition">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl">🐻</span>
+                            <div>
+                                <div class="font-medium text-[var(--color-black)]">Talk to a friend</div>
+                                <div class="text-xs text-[var(--color-blue-500)] font-semibold">20 EXP</div>
+                            </div>
+                        </div>
+                        <button
+                            class="btn btn-xs bg-[var(--color-blue-500)] text-[var(--color-white)] rounded-full px-4 hover:bg-[var(--color-blue-500)]/80 transition"
+                        >
+                            Start
+                        </button>
+                    </div>
+                </li>
+                <!-- Quest 4 -->
+                <li>
+                    <div class="flex items-center justify-between gap-2 p-3 rounded-xl bg-[var(--color-gray-700)]/5 hover:bg-[var(--color-gray-700)]/10 transition">
+                        <div class="flex items-center gap-3">
+                            <span class="text-2xl">🐋</span>
+                            <div>
+                                <div class="font-medium text-[var(--color-black)]">Study for 30 min.</div>
+                                <div class="text-xs text-[var(--color-blue-500)] font-semibold">50 EXP</div>
+                            </div>
+                        </div>
+                        <button
+                            class="btn btn-xs bg-[var(--color-blue-500)] text-[var(--color-white)] rounded-full px-4 hover:bg-[var(--color-blue-500)]/80 transition"
+                        >
+                            Start
+                        </button>
+                    </div>
+                </li>
+            </ul>
 
-Welcome to your new app.
+
+        </div>
+        <span class="ml-2 text-base text-[var(--color-black)] font-medium" style="line-height: var(--text-xl--line-height);">
+            @* list remaing quests here *@
+            4 Remaining Quests...
+        </span>
+    </div>
+
+    @* Playeground with avatars*@
+    <span>
+
+    </span>
+    @* <button class="btn btn-soft fixed p-0 bottom-[104px] right-2"> *@
+    @*     <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" *@
+    @*          stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard"> *@
+    @*         <rect width="8" height="4" x="8" y="2" rx="1" ry="1"/> *@
+    @*         <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/> *@
+    @*     </svg> *@
+    @*     <svg class="svg-icon" viewBox="0 0 20 20"> *@
+    @*         stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard"> *@
+    @*         <path fill="none" d="M13.388,9.624h-3.011v-3.01c0-0.208-0.168-0.377-0.376-0.377S9.624,6.405,9.624,6.613v3.01H6.613c-0.208,0-0.376,0.168-0.376,0.376s0.168,0.376,0.376,0.376h3.011v3.01c0,0.208,0.168,0.378,0.376,0.378s0.376-0.17,0.376-0.378v-3.01h3.011c0.207,0,0.377-0.168,0.377-0.376S13.595,9.624,13.388,9.624z M10,1.344c-4.781,0-8.656,3.875-8.656,8.656c0,4.781,3.875,8.656,8.656,8.656c4.781,0,8.656-3.875,8.656-8.656C18.656,5.219,14.781,1.344,10,1.344z M10,17.903c-4.365,0-7.904-3.538-7.904-7.903S5.635,2.096,10,2.096S17.903,5.635,17.903,10S14.365,17.903,10,17.903z"></path> *@
+    @*     </svg> *@
+    @* </button> *@
+</div>
