@@ -7,6 +7,5 @@ cmds = [
     "ls -l out"
 ]
 
-
 [start]
-cmd = "dotnet out/SelfQuest.csproj"
+cmd = "dotnet out/SelfQuest.dll"
