@@ -1,0 +1,71 @@
+@page "/posts"
+@using SelfQuest.Models
+@using SelfQuest.Services
+@inject IPostService PostService
+
+<div class="container mx-auto p-4">
+    <h2 class="text-2xl font-bold mb-4">Community Posts</h2>
+
+    @if (isLoading)
+    {
+        <p>Loading posts... Grab a coffee, this won’t take long.</p>
+    }
+    else if (posts != null && posts.Any())
+    {
+        <div class="space-y-4">
+            @foreach (var post in posts)
+            {
+                <div class="bg-white p-4 rounded shadow">
+                    <div class="flex items-center mb-2">
+                        <span class="font-semibold">@post.AuthorUsername</span>
+                        <span class="ml-2 text-gray-500 text-xs">@post.CreatedAt.ToLocalTime().ToString("g")</span>
+                    </div>
+                    @if (!string.IsNullOrEmpty(post.ImageUrl))
+                    {
+                        <div class="mb-2">
+                            <img src="@post.ImageUrl" alt="Post image" class="rounded max-h-64 mb-2" style="object-fit:cover;" />
+                        </div>
+                    }
+                    <div class="mb-2">
+                        <p>@post.Content</p>
+                    </div>
+                    @if (post.Tags != null && post.Tags.Any())
+                    {
+                        <div class="mb-2">
+                            @foreach (var tag in post.Tags)
+                            {
+                                <span class="inline-block bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded mr-1">#@tag</span>
+                            }
+                        </div>
+                    }
+                    <div class="flex items-center space-x-4 text-sm text-gray-600">
+                        <span>👍 @((post.Likes?.Count ?? 0))</span>
+                        <span>💬 @((post.Comments?.Count ?? 0))</span>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <p>No posts yet. Be the first to share something with the world!</p>
+    }
+</div>
+
+@code {
+    private List<PostDto> posts;
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            posts = await PostService.GetAllPostsAsync();
+        }
+        catch
+        {
+            posts = new List<PostDto>();
+        }
+        isLoading = false;
+    }
+}
