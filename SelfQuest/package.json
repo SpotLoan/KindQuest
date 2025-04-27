@@ -2,7 +2,7 @@
   "scripts": {
     "tw:dev": "npx @tailwindcss/cli -i ./wwwroot/css/input.css -o ./wwwroot/css/output.css",
     "tw:dev:watch": "npx @tailwindcss/cli -i ./wwwroot/css/input.css -o ./wwwroot/css/output.css --watch",
-    "tw:build:prod": "npx @tailwindcss/cli -i ./wwwroot/css/input.css -o ./wwwroot/css/output.css --min",
+    "tw:build:prod": "npx @tailwindcss/cli -i ./wwwroot/css/input.css -o ./wwwroot/css/output.css --minify",
     "build": "dotnet publish -c Release"
   },
   "dependencies": {
