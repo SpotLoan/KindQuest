@@ -25,10 +25,10 @@
 
   <!-- Build targets -->
     <Target Name="Tailwindcss" BeforeTargets="Build" Condition="'$(Configuration)'=='Debug'">
-        <Exec Command="yarn run tw:dev" WorkingDirectory="$(MSBuildProjectDirectory)" />
+        <Exec Command="yarn run tw:dev" WorkingDirectory="/src" />
     </Target>
 
     <Target Name="TailwindcssProd" BeforeTargets="Build" Condition="'$(Configuration)'=='Release'">
-        <Exec Command="yarn run tw:build:prod" WorkingDirectory="$(MSBuildProjectDirectory)" />
+        <Exec Command="yarn run tw:build:prod" WorkingDirectory="/src" />
     </Target>
 </Project>
