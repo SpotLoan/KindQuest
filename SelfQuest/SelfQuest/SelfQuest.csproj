@@ -24,11 +24,9 @@
   </PropertyGroup>
 
   <!-- Build targets -->
-  <Target Name="Tailwindcss" BeforeTargets="Build" Condition="'$(Configuration)'=='Debug'">
-    <Exec Command="npm run tw:dev" />
-  </Target>
+    <Target Name="Tailwindcss" BeforeTargets="Build" Condition="'$(Configuration)'=='Debug'">
+        <Exec Command="npm run tw:dev" />  </Target>
 
-  <Target Name="TailwindcssProd" BeforeTargets="Build" Condition="'$(Configuration)'=='Release'">
-    <Exec Command="npm run tw:build:prod" />
-  </Target>
+    <Target Name="TailwindcssProd" BeforeTargets="Build" Condition="'$(Configuration)'=='Release'">
+        <Exec Command="npm run tw:build:prod" />  </Target>
 </Project>
