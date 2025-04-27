@@ -2,7 +2,11 @@
 nixPkgs = ["dotnet-sdk_8"]
 
 [phases.build]
-cmds = ["dotnet publish -c Release -o out"]
+cmds = [
+    "dotnet publish -c Release -o out",
+    "ls -l out"
+]
+
 
 [start]
 cmd = "dotnet out/SelfQuest.dll"
