@@ -12,12 +12,10 @@ RUN apt-get update && \
     corepack enable && \
     rm -rf /var/lib/apt/lists/*
 
-# Switch back to the non-root container user 'app'
-USER app
-
 # Make sure 'app' owns the working directory
-USER root
+RUN useradd -m app || true
 RUN chown -R app:app /src
+
 USER app
 
 # Copy project file and restore dependencies
@@ -38,6 +36,7 @@ FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 RUN dotnet publish "SelfQuest.csproj" -c $BUILD_CONFIGURATION -o /src/publish /p:UseAppHost=false --no-build
+RUN ls -l /src/publish
 
 # Stage 3: Final runtime image
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
