@@ -37,7 +37,7 @@ COPY [".", "."]
 RUN yarn install --frozen-lockfile
 
 # Build the project (runs dotnet build, which triggers npm/yarn scripts from csproj)
-RUN dotnet build "SelfQuest.csproj" -c $BUILD_CONFIGURATION --no-restore
+RUN dotnet build "SelfQuest.csproj" -c $BUILD_CONFIGURATION --no-restore -v diag
 
 # Stage 2: Publish (Likely unchanged)
 FROM build AS publish
