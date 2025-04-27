@@ -9,4 +9,4 @@ cmds = [
 
 
 [start]
-cmd = "dotnet out/SelfQuest.dll"
+cmd = "dotnet out/SelfQuest.csproj"
